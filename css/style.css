@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-center{
+    align-items: center;
+}
+.heading{
+    font-size: 46px;
+    color: #02918c;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+.heading span{
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #7e8287;
+}
+.card{
+    border-right: 2px solid #ccc;
+    width: 25%;
+    text-align: center;
+    padding: 25px 0;
+   
+}
+.card .icon{
+    color: #02918c;
+    font-size: 25px;
+}
+.card h4{
+    margin: 25px 0;
+    font-weight: 800;
+    font-size: 16px;
+    color: #7e8287;
+}
+.card p{
+    font-size: 11px;
+    color: #7e8287;
+    padding:0 50px;
+    line-height: 15px;
+}
+.button{
+    background-color: #cfc91d;
+    color: rgb(10, 10, 10);
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 15px 43px;
+    display: inline-block;
+}
+
+/* *common elements ends here */
+/* nav starts here */
+nav{
+    background-color: #02918b;
+}
+nav .logo{
+    width: 40%;
+}
+nav .menu{
+    width: 60%;
+}
+nav .menu ul{
+    text-align: right;
+}
+nav .menu ul li{
+    display: inline-block;
+}
+
+nav .menu ul li a{
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+    padding: 26px 25px;
+    display: inline-block;
+}
+nav .menu ul li a {
+    color: rgb(252, 247, 247);
+    padding: 15px 20px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;   
+}
+
+nav .menu ul li a::after {
+    content:"";
+    width: 0%;
+    height: 100%;
+    background-color: rgb(231, 139, 136);
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+    z-index: -1;
+}
+nav .menu  li a::before {
+    content:"";
+    width: 0%;
+    height: 100%;
+    background-color: rgb(231, 139, 136);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.4s;
+    z-index: -1;
+}
+nav .menu ul li:hover > a::after ,
+nav .menu ul li:hover > a::before {
+    width: 50%;
+}
+
+/* nav ends here */
+/* banner stars here */
+#banner{
+    height: 728px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../image/banner\ \(1\).jpg);
+    background-color: rgba(0, 0, 0, 0.34);
+    background-blend-mode: multiply;
+    color: white;
+    text-align: center;
+}
+#banner .banner_content{
+    width: 100%;
+}
+#banner .row{
+    height: 728px;
+}
+#banner .banner_content h2{
+    font-weight: 400;
+    font-size: 30px;
+}
+#banner .banner_content h1{
+    font-weight: 800;
+    font-size: 68px;
+    text-transform: uppercase;
+    letter-spacing: 30px;
+}
+#banner .banner_content p{
+    font-weight: 400;
+    font-size: 18px;
+}
+#banner .banner_content img{
+    margin: 50px 0;
+}
+#banner .banner_content a{
+    background-color: #cfc91d;
+    color: #0b1016;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 15px 43px;
+    display: inline-block;
+    transition: 0.3;
+}
+#banner .banner_content a:hover{
+    background-color: #918d19;
+    color: white;
+}
+/* banner ends here */
+/* about starts here */
+#about{
+    padding: 98px 0;
+}
+#contact p,
+#work p,
+#about .intro{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #7e8287;
+    padding: 0 130px;
+    line-height: 35px;
+    margin-bottom: 70px;
+}
+#about .card:last-child{
+    border: none;
+}
+/* about ends here */
+
+/* service starts */
+#service{
+    padding: 74px 0;
+    background-image: url(../image/serviceBG.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.service_cnt{
+    width: 50%;
+}
+.service_cnt .heading{
+    text-align: left;
+}
+.service_cnt p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #7e8287;
+    line-height: 30px;
+    margin-top: 30px;
+}
+
+.service_cnt .card{
+    width: 50%;
+    border: none;
+    text-align: left;
+}
+.service_cnt .card p{
+    font-size: 11px;
+    padding-left: 0;
+}
+/* service end */
+#work h2{
+    margin-top: 100px;
+}
+#pic{
+    padding: 60px 0;
+}
+#pic .pics{
+    width: 25%;
+    position: relative;
+}
+#pic .pics img{
+    display: block;
+    width: 100%;
+}
+#pic .pics .overlay{
+    background-color: rgba(24, 197, 211, 0.85);
+    position: absolute;
+    top: 0;
+    inset: 30px;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    transform: scale(0);
+    transition: 0.5s;
+}
+#pic .pics:hover .overlay{
+    transform: scale(1);
+}
+#pic .pics .overlay p{
+    padding: 20px 10px;
+    line-height: 25px;
+}
+
+/* card end */
+
+/* form start */
+.data {
+    padding: 60px 0;
+    background-color: #0a0a0b;
+    text-align: center;
+    
+}
+.form-input{
+    width: 500px;
+    margin: 0 auto 80px auto;
+}
+.form-input textarea,
+.form-input input{
+    width: 70%;
+    height: 35px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-transform: uppercase; 
+}
+
+.form-input textarea{
+    height: 150px;
+}
+/* form end */
+#last{
+    background-color: #211d1d;
+    color: #979a9c;
+    text-align: center;
+    height: 50px;
+    padding: 25px 20px 0 0 ; 
+}
